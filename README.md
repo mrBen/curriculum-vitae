@@ -1,2 +1,4 @@
-# curriculum-vitae
-It's just my (presumably up-to-date) curriculum vitae.
+# My curriculum vitae
+
+- [English version](./[en]CV_Benjamin_Collet.pdf)
+- [French version](./[fr]CV_Benjamin_Collet.pdf)

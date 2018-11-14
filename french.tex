@@ -1,0 +1,78 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+\collectionnew{altsocials}
+\NewDocumentCommand{\altsocial}{O{}O{}m}{%
+  \ifthenelse{\equal{#2}{}}%
+    {%
+      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[linkedin.com/in/#3]{www.linkedin.com/in/#3}}}{}%
+      \ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httplink[twitter.com/#3]{www.twitter.com/#3}}}        {}%
+      \ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httplink[github.com/#3]{www.github.com/#3}}}          {}%
+    }
+    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
+
+% moderncv themes
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+\setlength{\hintscolumnwidth}{3.1cm}                 % if you want to change the width of the column with the dates
+
+% personal data
+\name{Benjamin}{Collet}
+\title{Étudiant en recherche opérationnelle}
+\address{46 Rue du Vieux Pont}{01550 Pougny}{France}
+\phone[mobile]{+33~6~95~36~00~58}
+\email{benjamin.collet@protonmail.ch}
+\altsocial[linkedin]{benjamin-collet}
+\altsocial[github]{TheMrBen}
+\photo[71pt][0.4pt]{portrait}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+
+\section{Formation}
+\cventry{Depuis 2017}{Master}{Université Grenoble Alpes}{}{}{Master of Science in Informatics at Grenoble (MoSIG)}
+    \cvlistitem{Spécialité \textbf{Recherche Opérationnelle, Combinatoire et Optimisations}}
+    \vspace{7pt}
+\cventry{2016 -- 2017}{Licence Erasmus}{Oulu University of Applied Sciences}{Finlande}{}{Information and Communications Technology}
+    \cvlistitem{Études à l'étranger~: anglais, \textbf{adaptation} à la culture, \textbf{autonomie}}
+    \cvlistitem{Projet d'entreprises, \textbf{travail en équipe}}
+    \vspace{7pt}
+\cventry{2014 -- 2016}{Diplôme Universitaire de Technologie}{IUT d'Annecy}{}{}{Informatique}
+    \cvlistitem{Conception de logiciels et de bases de données}
+    \cvlistitem{Introduction à l'économie, la gestion et la communication}
+
+\section{Stages}
+\cventry{Février -- Juin 2018}{Verimag (laboratoire de recherche)}{Stagiaire M1}{}{}{}
+    \cvlistitem{Modélisation d'une topologie de réseau avec l'\textbf{assistant de preuve} Coq}
+    \vspace{7pt}
+\cventry{Avril -- Juin 2016}{LISTIC (laboratoire de recherche)}{Stagiaire DUT}{}{}{}
+    \cvlistitem{Programmation d’un \textbf{parseur} entre deux langages mathématique}
+    \cvlistitem{Création d’une \textbf{interface graphique complète et ergonomique}}
+
+\section{Expériences professionnelles}
+\cventry{Juillet 2014 et 2015}{SFMCP (centrale hydroélectrique)}{Agent d'entretien}{Suisse}{}{}
+    \cvlistitem{\textbf{Travail d’équipe}}
+    \cvlistitem{\textbf{Respect des règles de sécurité} (utilisation de matériels dangereux)}
+    \vspace{7pt}
+\cventry{Août 2013}{Jardicrêt}{Jardinier}{}{}{}
+    \cvlistitem{\textbf{Respect des consignes} pour satisfaire les clients}
+    \cvlistitem{\textbf{Besoin d’efficacité} (petite entreprise)}
+
+\section{Langue}
+\cvitemwithcomment{Anglais}{Courant (C1)}{études à l'étranger (Finlande)}
+
+\section{Centres d'intérêt}
+\cvitem{Association étudiante}{Impliqué dans une association qui accueille les étudiants internationaux. J'ai amélioré mes compétences en \textbf{communication interpersonnelle} et \textbf{improvisation}.}
+    \vspace{7pt}
+\cvitem{Sport}{Ceinture noire de Kung Fu, 8 ans de pratique et un voyage en Chine. Cela m’a apporté de la \textbf{discipline}, de la \textbf{rigueur} et de la \textbf{persévérance}.}
+
+\end{document}
