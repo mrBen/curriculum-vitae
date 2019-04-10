@@ -1,18 +1,17 @@
 OUTPUT=CV_Benjamin_Collet
 
-all: rerun clean
-
-rerun: english french
-	@pdflatex -jobname [en]$(OUTPUT) english > /dev/null && pdflatex -jobname [fr]$(OUTPUT) french > /dev/null
+all: english french clean
 
 english: english.tex
-	@pdflatex -jobname [en]$(OUTPUT) english
+	@latexmk -pdf -jobname=[en]$(OUTPUT) english
 
 french: french.tex
-	@pdflatex -jobname [fr]$(OUTPUT) french
+	@latexmk -pdf -jobname=[fr]$(OUTPUT) french
 
-clean: 
-	@rm -f *.aux *.log *.out
+clean:
+	@latexmk -pdf -jobname=[en]$(OUTPUT) english -c
+	@latexmk -pdf -jobname=[fr]$(OUTPUT) french -c
 
-distclean: clean
-	@rm -f *.pdf
+distclean:
+	@latexmk -pdf -jobname=[en]$(OUTPUT) english -C
+	@latexmk -pdf -jobname=[fr]$(OUTPUT) french -C
