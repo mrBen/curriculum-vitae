@@ -1,4 +1,4 @@
 # My curriculum vitae
 
-- [English version](./[en]CV_Benjamin_Collet.pdf) :uk:
-- [French version](./[fr]CV_Benjamin_Collet.pdf) :fr:
+- [English version](./cv_benjamin_collet.en.pdf) :uk:
+- [French version](./cv_benjamin_collet.fr.pdf) :fr:

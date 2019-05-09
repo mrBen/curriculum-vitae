@@ -1,17 +1,19 @@
-OUTPUT=CV_Benjamin_Collet
+OUTPUT=cv_benjamin_collet
+EN=$(OUTPUT).en
+FR=$(OUTPUT).fr
 
 all: english french clean
 
 english: english.tex
-	@latexmk -pdf -jobname=[en]$(OUTPUT) english
+	@latexmk -pdf -jobname=$(EN) english
 
 french: french.tex
-	@latexmk -pdf -jobname=[fr]$(OUTPUT) french
+	@latexmk -pdf -jobname=$(FR) french
 
 clean:
-	@latexmk -pdf -jobname=[en]$(OUTPUT) english -c
-	@latexmk -pdf -jobname=[fr]$(OUTPUT) french -c
+	@latexmk -pdf -jobname=$(EN) english -c
+	@latexmk -pdf -jobname=$(FR) french -c
 
 distclean:
-	@latexmk -pdf -jobname=[en]$(OUTPUT) english -C
-	@latexmk -pdf -jobname=[fr]$(OUTPUT) french -C
+	@latexmk -pdf -jobname=$(EN) english -C
+	@latexmk -pdf -jobname=$(FR) french -C
