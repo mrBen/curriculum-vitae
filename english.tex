@@ -1,15 +1,5 @@
 \documentclass[10pt,a4paper,sans]{moderncv}
 
-\collectionnew{altsocials}
-\NewDocumentCommand{\altsocial}{O{}O{}m}{%
-  \ifthenelse{\equal{#2}{}}%
-    {%
-      \ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[linkedin.com/in/#3]{www.linkedin.com/in/#3}}}{}%
-      \ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httplink[twitter.com/#3]{www.twitter.com/#3}}}        {}%
-      \ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httplink[github.com/#3]{www.github.com/#3}}}          {}%
-    }
-    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
-
 % moderncv themes
 \moderncvstyle{classic}
 \moderncvcolor{blue}
@@ -27,8 +17,8 @@
 \address{46 Rue du Vieux Pont}{01550 Pougny, France}{}
 \phone[mobile]{+33~6~95~36~00~58}
 \email{benjamin.collet@protonmail.ch}
-\altsocial[linkedin]{benjamin-collet}
-\altsocial[github]{TheMrBen}
+\social[linkedin][www.linkedin.com/in/benjamin-collet]{linkedin.com/in/benjamin-collet}
+\social[github][github.com/TheMrBen]{github.com/TheMrBen}
 
 %----------------------------------------------------------------------------------
 %            content
